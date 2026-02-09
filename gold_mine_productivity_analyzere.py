@@ -1594,30 +1594,10 @@ def analyze_cost_efficiency(data):
         'potential_savings': potential_savings
     }
 
-def open_browser():
-    """Open browser after delay"""
-    time.sleep(3)
-    webbrowser.open('http://localhost:5000')
 
 if __name__ == '__main__':
-    print("⛏️  Gold Mine Productivity Analyzer")
-    print("=" * 50)
-    print("✅ AI-powered mining operations optimization")
-    print("🌐 Starting server at http://localhost:5000")
-    print("\nFeatures:")
-    print("  • Production forecasting with ML algorithms")
-    print("  • Operational efficiency optimization")
-    print("  • Cost prediction and analysis")
-    print("  • Weather impact assessment")
-    print("  • Equipment utilization optimization")
-    print("  • Worker productivity analysis")
-    print("\nPress Ctrl+C to stop")
-    print("-" * 50)
-    
-    # Auto-open browser
-    Timer(2.0, open_browser).start()
-    
+    # For local testing
     try:
-        app.run(debug=False, host='0.0.0.0', port=5000)
+        app.run(debug=True, host='0.0.0.0', port=5000)
     except KeyboardInterrupt:
-        print("\n👋 Gold Mine Productivity Analyzer stopped successfully")
+        pass
